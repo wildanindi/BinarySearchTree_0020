@@ -83,4 +83,9 @@ class BinaryTree
             }
         }
 
+        void preorder(Node* ptr)
+        {
+            
+        }
+
 };
