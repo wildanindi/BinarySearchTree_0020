@@ -32,7 +32,16 @@ class BinaryTree
             newNode->info = element; //assign value to the data field of the new data
             newNode->leftchild = nullptr; // Make the left child of the new node point to NULL
             newNode->rightchild = nullptr; // make the right child  of the new data point to NULL
-            
+
+
+            Node* parent = nullptr;
+            Node* currentNode = nullptr;
+            search(element, parent, currentNode); // Locate the node which be the parent of the node to be inserted
+
+            if (parent == nullptr){ // if the parent is NULL (Tree is Empty)
+                ROOT = newNode; // mark the new node as ROOT
+                return; // Exit
+            }
         }
 
 };
