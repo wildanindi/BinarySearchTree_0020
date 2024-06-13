@@ -45,7 +45,11 @@ class BinaryTree
 
             if (element < parent->info) //if the value in the data field of the new node is less than that of the parent
             {
-
+                parent->leftchild = newNode; // make the left child of the parent point on the new node
+            }
+            else if (element > parent->info)// if the value in the data field of the new data is greater than thatof the parent
+            {
+                parent->rightchild = newNode; // Make the right child of the parent point to the new node
             }
         }
 
